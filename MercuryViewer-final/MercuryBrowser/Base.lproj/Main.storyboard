@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MercuryBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="center" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FJy-Kz-t1C">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MercuryCell" id="V7r-ih-oZu" customClass="MercuryCell" customModule="MercuryBrowser" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="300.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V7r-ih-oZu" id="Ixv-fg-gmJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="300.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWk-C3-Qpy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="300.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="300" id="Wwp-Fo-LRw"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCC-3d-2sH">
+                                                    <rect key="frame" x="0.0" y="279.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUq-wW-bmH">
+                                                    <rect key="frame" x="372" y="279.5" width="42" height="21"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="MercuryCell"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bWk-C3-Qpy" firstAttribute="height" secondItem="Ixv-fg-gmJ" secondAttribute="height" id="06e-vi-KLH"/>
+                                                <constraint firstItem="bWk-C3-Qpy" firstAttribute="width" secondItem="Ixv-fg-gmJ" secondAttribute="width" id="77w-rg-nu7"/>
+                                                <constraint firstItem="eCC-3d-2sH" firstAttribute="leading" secondItem="Ixv-fg-gmJ" secondAttribute="leading" id="LHU-MF-Fyk"/>
+                                                <constraint firstAttribute="bottom" secondItem="eCC-3d-2sH" secondAttribute="bottom" id="OcL-Dm-QMI"/>
+                                                <constraint firstItem="bWk-C3-Qpy" firstAttribute="centerX" secondItem="Ixv-fg-gmJ" secondAttribute="centerX" id="ffI-vd-LhB"/>
+                                                <constraint firstAttribute="trailing" secondItem="NUq-wW-bmH" secondAttribute="trailing" id="i2D-NO-PLz"/>
+                                                <constraint firstAttribute="bottom" secondItem="NUq-wW-bmH" secondAttribute="bottom" id="jXH-mx-vvY"/>
+                                                <constraint firstItem="bWk-C3-Qpy" firstAttribute="centerY" secondItem="Ixv-fg-gmJ" secondAttribute="centerY" id="msR-od-ol3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="cell"/>
+                                        <connections>
+                                            <outlet property="mercuryImage" destination="bWk-C3-Qpy" id="2SP-BU-k51"/>
+                                            <outlet property="nameLabel" destination="eCC-3d-2sH" id="Cxr-oh-vDE"/>
+                                            <outlet property="typeLabel" destination="NUq-wW-bmH" id="KNL-JP-ske"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FJy-Kz-t1C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="A4D-k3-Fgk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FJy-Kz-t1C" secondAttribute="bottom" id="Jh3-mS-IEB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FJy-Kz-t1C" secondAttribute="trailing" id="fW8-cA-0JG"/>
+                            <constraint firstItem="FJy-Kz-t1C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="urR-4N-btm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="FJy-Kz-t1C" id="ZHu-fY-bHP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="112.5"/>
+        </scene>
+    </scenes>
+</document>
