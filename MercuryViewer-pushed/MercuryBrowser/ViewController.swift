@@ -12,12 +12,20 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let items = MercuryService().mercuryList
+    var service: MercuryService = MercuryService()
+    var items: [MercuryItem] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        service.getInfo(theUrl: "https://raw.githubusercontent.com/rmirabelli/mercuryserver/master/mercury.json") {
+            items in self.items = items
+            DispatchQueue.main.async{
+                self.tableView.reloadData()
+            }
+            
+        }
         tableView.dataSource = self
+        
     }
     
 }
@@ -39,15 +47,16 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
             if let data = data {
                 let image = UIImage(data: data)
                 DispatchQueue.main.async {
+                    
                     mercuryCell.mercuryImage.image = image
-            
+                        
             }
         }
             
         }
     
     task.resume()
-    self.tableview.reloadData()
+    //self.tableview.reloadData()
     }
     return cell
 
