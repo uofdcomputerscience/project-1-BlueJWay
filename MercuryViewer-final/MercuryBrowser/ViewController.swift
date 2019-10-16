@@ -56,7 +56,6 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
         }
     
     task.resume()
-    //self.tableview.reloadData()
     }
     return cell
 

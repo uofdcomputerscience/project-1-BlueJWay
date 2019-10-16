@@ -18,7 +18,4 @@ struct MercuryItem: Codable {
         self.type = t
         self.url = u
     }
-    //var imageURL: URL {
-    //    return URL(string: url)!
-    //}
 }
